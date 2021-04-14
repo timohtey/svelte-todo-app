@@ -19,9 +19,9 @@
 
 <main>
   <h1>To-do List</h1>
-  <form on:click|preventDefault={addToDo}>
+  <form>
     <input type="text" placeholder="Add To-Do" bind:value={name} />
-    <button>Add</button>
+    <button type="submit" on:click|preventDefault={addToDo}>Add</button>
   </form>
   {#each toDos as toDo}
     <ToDo name={toDo} on:deleteToDo={deleteToDo} />
